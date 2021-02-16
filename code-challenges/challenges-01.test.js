@@ -13,7 +13,7 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 const addOne = (arr) => {
   // Solution code here...
   const result = [];
-//work goes here;
+  //work goes here;
   arr.forEach(function(number) {
     result.push(number +1);
   });
@@ -34,7 +34,7 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 const addExclamation = (arr) => {
   // Solution code here...
   const result = [];
-// //work goes here;
+  //work goes here;
   arr.forEach(function(greetWith){
     result.push(greetWith +'!');
   });
@@ -53,7 +53,7 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 const allUpperCase = (arr) => {
   // Solution code here...
   const result = [];
-// //work goes here;
+  //work goes here;
   arr.forEach(greetings => {
     const greetingsUpperCase = greetings.toUpperCase();
     result.push(greetingsUpperCase);
@@ -75,18 +75,18 @@ Use `forEach` to build a new array of strings, each string modified by the callb
     expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  // Solution code here...
-  const result = [];
-  word.forEach(greeting =>{
-    const greetingEx = greeting.toUpperCase();
-    result.push(greetingEx);
-  });
-};
+// const greeting = (word) => {
+//   // Solution code here...
+//   const result = [];
+//   word.forEach(greeting =>{
+//     const greetingEx = greeting.toUpperCase();
+//     result.push(greetingEx);
+//   });
+// };
 
-const speaker = (words, callback) => {
-  // Solution code here...
-};
+// const speaker = (words, callback) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -104,13 +104,13 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => {
-  // Solution code here...
-};
+// const addValues = (arr, value) => {
+//   // Solution code here...
+// };
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+// const addNumbers = (num, arr, times, callback) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -130,9 +130,9 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-const createList = (availableItems) => {
-  // Solution code here...
-};
+// const createList = (availableItems) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -148,9 +148,26 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  // Solution code here...
-};
+// const fizzbuzz = (arr) => {
+//   // Solution code here...
+// //   const results = [];
+
+// //   arr.forEach(num => {
+// //     if(num % 3 === 0){
+// //       if(num % 5 === 0){
+// //         results.push('Fizz Buzz');
+// //       } else {
+// //         results.push('Fizz');
+// //       }
+// //     }else if(num % 5 === 0){
+// //       results.push('Buzz');
+// //     } else{
+// //       results.push(num);
+// //     }
+// //   });
+// //   return results;
+// // };
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
