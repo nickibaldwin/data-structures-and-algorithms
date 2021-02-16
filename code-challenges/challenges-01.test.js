@@ -150,6 +150,25 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const results = [];
+
+  arr.forEach(num => {
+    if(num % 3 === 0){
+      if(num % 5 === 0){
+        results.push('Fizz Buzz');
+      } else {
+        results.push('Fizz');
+      }
+    }else if(num % 5 === 0){
+      results.push('Buzz');
+    } else{
+      results.push(num);
+    }
+  });
+  return results;
+};
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
