@@ -8,15 +8,16 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
     expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
 ------------------------------------------------------------------------------------------------ */
+//Math.pow () function returns the base to the exponent power
 
-const raisedToTheThird = (arr) => {
+const raisedToTheThird = (arr) => { //declare the function which is equal to the array arr
   // Solution code here...
-  const resultsArray = [];
+  const resultsArray = []; //
   arr.forEach(function(value){
     resultsArray.push(Math.pow(value, 3));
   });
 
-  return resultsArray;  
+  return resultsArray;
 };
 raisedToTheThird([2, 4, 5, -7, 0]);
 /* ------------------------------------------------------------------------------------------------
@@ -70,10 +71,18 @@ For example:
 const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
+
+Expected:
+const a = { fullName: 'Octavia Butler' };
+addBirthYearProperty(a, 1947);
+
+expect(a.yearBorn).toStrictEqual(1947);
 ------------------------------------------------------------------------------------------------ */
 
-const addBirthYearProperty = (obj, year) => {
+
+const addBirthYearProperty = (obj, year) => { //addBirthYearProperty is equal to obj and year, we need to make sure year is set to the birth year
   // Solution code here...
+  obj.yearBorn = year; //taking the object yearBorn and setting it to equal year
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,7 +158,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should add a property to an object', () => {
     const a = { fullName: 'Octavia Butler' };
     addBirthYearProperty(a, 1947);
