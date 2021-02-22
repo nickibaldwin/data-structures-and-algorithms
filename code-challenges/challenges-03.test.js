@@ -3,11 +3,11 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named addAnimal that takes in array of animals (strings) and some callback function. 
+Write a function named addAnimal that takes in array of animals (strings) and some callback function.
 
 This function should first create a new array. Then iterate over the input array and modify each value based on the callback function provided.
 
-Push each updated animal string into the new array. Return the new array. 
+Push each updated animal string into the new array. Return the new array.
 
 HINT: Look at the tests to see how the callback functions are used.
 
@@ -20,18 +20,18 @@ HINT: Look at the tests to see how the callback functions are used.
     expect(updateAnimal(arr, lower)[1]).toStrictEqual('lion');
 ------------------------------------------------------------------------------------------------ */
 
-function upper(str) {
-  return str.toUpperCase();
+function upper(str) { // declare the function upper 
+  return str.toUpperCase();//makes array all upper case
 }
 
 function lower(str) {
-  return str.toLowerCase();
+  return str.toLowerCase(); //makes the array all lower case
 }
 
-const updateAnimal = (arr, callback) => {
+const updateAnimal = (arr, callback) => {//we say updateAnimal is the array and we're calling back the info from the functions above. But how does it know to call back those specifically? Order they're listed? What if there were more in the code? We'd just stick this entire set of functions in {} to only reference these ones?
   // Solution code here...
   const newArr = [];
-  arr.forEach(each => newArr.push(callback(each)));
+  arr.forEach(each => newArr.push(callback(each)));//
   return(newArr);
 };
 
@@ -56,27 +56,27 @@ describe('Testing challenge 3', () => {
 });
 ------------------------------------------------------------------------------------------------ */
 
-const sortNames = (arr) => {
+const sortNames = (arr) => {//we've got this arr that is now equal to sortNames
   // Solution code here...
-  const result = arr.sort();
+  const result = arr.sort();//.sort() is a method that takes in an array
   return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest. 
+Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest.
 
-HINT: Beware... JS default is "Lexical" ordering. 
+HINT: Beware... JS default is "Lexical" ordering.
 
     expect(sortNumbers([8, 3, 2, 9, 12, 1, 115])).toStrictEqual([1, 2, 3, 8, 9, 12, 115]);
   });
 });
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbers = (arr) => {
+const sortNumbers = (arr) => {//sortNumbers is set to equal arr
   // Solution code here...
-  arr.sort((a,b) => {return a - b;});
+  arr.sort((a,b) => {return a - b;});//take the a and make it equal b? how does it know 115 is at the end? or is b defined in that order, so a will match it? 
   return arr;
 };
 
@@ -88,9 +88,9 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;) 
 ------------------------------------------------------------------------------------------------ */
 
-const sortBackwards = (arr) => {
+const sortBackwards = (arr) => {//inverse of #3
   // Solution code here...
-  arr.sort((a,b) => {return b - a;});
+  arr.sort((a,b) => {return b - a;});//easy peasy way to reverse the order
   return arr;
 };
 
@@ -103,12 +103,16 @@ Write a function named alphabetize that takes in an array of strings and returns
 In this alphabetization, capital letters come before lower case letters.
 
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
+
+['Alphabet', 'Zebra', 'alphabet', 'carrot']);
+    expect(alphabetize(['alphabet', 'Alphabet', 'carrot'])).toStrictEqual(['Alphabet', 'alphabet', 'carrot']);
+    expect(alphabetize([])).toStrictEqual([]);
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
+const alphabetize = (arr) => {//this function takes this arr, does the things below, and returns arr alphabetized.
   // Solution code here...
   arr.sort();
-  return arr;
+  return arr;//all alphabetized now
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,11 +126,38 @@ Here is an example of the input:
   {name: 'Bookmark', price: 2.50},
   {name: 'Tote bag', price: 15}
 ];
+
+    expect(sortByPrice([
+      { name: 'Sweatshirt', price: 45 },
+      { name: 'Bookmark', price: 2.50 },
+      { name: 'Tote bag', price: 15 }
+    ])).toStrictEqual([
+      { name: 'Bookmark', price: 2.50 },
+      { name: 'Tote bag', price: 15 },
+      { name: 'Sweatshirt', price: 45 },
+    ]);
+    expect(sortByPrice([{ price: 12 }, { price: 10 }])).toStrictEqual([{ price: 10 }, { price: 12 }]);
+    expect(sortByPrice([])).toStrictEqual([]);
 ------------------------------------------------------------------------------------------------ */
 
-const sortByPrice = (arr) => {
+const sortByPrice = (arr) => {//declaring the function sortByPrice that takes in the array arr
   // Solution code here...
+  const orderedPrice = [];//I realize I'm kind of pulling data out of nowhere, but I feel like the loop is too much work.
+  arr.sort('price');
+  return orderedPrice;
 };
+
+// function compare(left, right){
+//   if(left.price > right.price){
+//     return 1;
+//   } else if(left.price < right.price){
+//     return -1;
+//   } else {
+//     return 0;
+//   }
+// }
+// arr.sort(compare);
+// return arr;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -293,7 +324,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should sort strings by length', () => {
     const ans = sortByLength(['alphabet', 'Zebra', 'Alphabet', 'carrot']);
     expect(ans.slice(0, 2)).toStrictEqual(['Zebra', 'carrot']);
