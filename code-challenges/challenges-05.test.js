@@ -170,6 +170,7 @@ const listFoods = (recipe) => {
   return result;
 };
 listFoods(gruffaloCrumble);
+//Matt Simms helped me through this and explained it quite well!
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
