@@ -20,7 +20,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-  let result = [];
+  const result = [];
   for(let value in obj){
     result.push(`<li>${value}: ${obj[value]}</li>`);
   }
@@ -59,11 +59,15 @@ Write a function named addPurchases that, given an array of objects as input, us
   item: 'switch'
   purchasePrice: 399
 }
-
+Yoyu need two parameters for .reduce((acc, value) => ) It's like $1000 in the stock market, after 1 week it may come back positive or negative
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
   // Solution code here...
+  return arr.reduce((acc,value) => {
+    acc += value.purchasePrice;
+    return acc;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,8 +80,12 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce((acc) => {
+    acc ++ ;
+    console.log(acc);
+    return acc;
+  }, 0 );
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -136,6 +144,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  return arr.reduce((acc, val) => {
+    acc.push(val.name);
+    return acc;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,6 +160,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  return str.split('').reduceRight((acc, val) => {
+    acc.push(val);
+    return acc;
+  }, []).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -330,27 +346,27 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
     expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the length of the array', () => {
     expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array continaing the names of the characters', () => {
     expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the string with the characters in reverse order', () => {
     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
