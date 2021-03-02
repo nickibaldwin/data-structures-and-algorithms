@@ -8,7 +8,10 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
-}
+  const regex = /0/g;
+  string = string.replace(regex, 'zero');
+  return string;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -51,26 +54,46 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
+  console.log(arr);
+  const twoToThe = arr.map((value) => {
+    return Math.pow(2, value);
+  });
+  return twoToThe;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
 Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
+
+    expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
+    expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
+
+
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  forEach
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
 Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
+
+1= 4   console.log(arr);
+  const twoToThe = arr.map((value) => {
+    return Math.pow(2, value);
+  });
+  return twoToThe;
+
+2= 5
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+.map()
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +108,7 @@ For example: charCode(['h','i']) returns [104, 105].
 //arr === ['C', 'o', 'd', 'e', '3', '0', '1']
 const charCode = (arr) => {
   // Solution code here...
-  console.log('arr', arr);
+  // console.log('arr', arr);
   //                  vP==='C'   index====0, arr ===['C', 'o', 'd', 'e', '3', '0', '1']
   //                  vP==='o'   index====1, arr ===['C', 'o', 'd', 'e', '3', '0', '1']
   //                  vP==='d'   index====2, arr ===['C', 'o', 'd', 'e', '3', '0', '1']
@@ -213,7 +236,7 @@ Run your tests from the console: jest challenges-07.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should replace all the 0\'s with the word "zero"', () => {
     expect(replaceZeros('301 is s0 much fun!')).toStrictEqual('3zero1 is szero much fun!');
   });
@@ -231,7 +254,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-code    cdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forLoopTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forLoopTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -242,7 +265,7 @@ code    cdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -253,7 +276,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -264,7 +287,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-describe('Testing challenge 7', () => {
+xdescribe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
