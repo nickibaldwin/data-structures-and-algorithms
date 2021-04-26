@@ -12,4 +12,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-- [Code Challenge 02: Array-Shift](code-challenges/arrayShift/README.md)
+- [Code Challenge Class 02: Array-Shift](challenges401/arrayShift/README.md)
+- [Code Challenge Class 04: arrayBinarySearch](challenges401/arrayBinarySearch/README.md)
+- [Code Challenge Class 05: Linked List](challenges401/linkedList/README.md)
