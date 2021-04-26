@@ -1,6 +1,13 @@
 'use strict';
 
-const Node = require('./node.js');
+// const Node = require('./node.js');
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
 
 class SinglyLinkedList {
   constructor() {
@@ -43,11 +50,6 @@ class SinglyLinkedList {
     let current = this.head;
     if(!this.head) return output;
     while(current) {
-      console.log('in string function', current);
-      // if(!current.next) {
-      //   output += current.value;
-      //   return output;
-      // }
       output += `{ ${current.value} } -> `;
       current = current.next;
     }
