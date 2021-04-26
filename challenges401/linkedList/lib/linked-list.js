@@ -5,8 +5,8 @@ const Node = require('./node.js');
 class SinglyLinkedList {
   constructor() {
     this.head = null;
-    this.tail = null; //UD
-    this.length = 0; //UD
+    this.tail = null;
+    this.length = 0;
   }
 
   insert(value){
@@ -15,47 +15,49 @@ class SinglyLinkedList {
       this.head = newNode;
       this.tail = this.head;
     } else {
-      this.tail.next = newNode;
-      this.tail = newNode;
+      newNode.next = this.head; //newNode is now this.head
+      this.head = newNode;
+      this.length++;
     }
-    this.length++;
     return this;
   }
 
   includes(value) {
-    let newNode = new Node(value);
-    if(!this.head){
-      this.head = newNode;
-      this.tail = this.head;
-    } else {
-      while (newNode.length != value)
-      newNode++, newNode = newNode.next()
-      if newNode = null;
-        return null;
-    }
-    return this;
-  }
-  append(value) {
-    // instantiate a new node to add to our LL
-    let node = new Node(value);
-
-    if(!this.head) {
-      this.head = node;
-    } else {
-      // traversal happens here
-      let current = this.head; // start the traversal at the beginning (head) of the LL
-
-      while(current.next) { // this is the actual traversal
-        current = current.next; // this moves you along in your traversal
+    let current = this.head;
+    if(!this.head) return false;
+    while(current) {
+      if(current.value === value){
+        return true;
       }
-
-      current.next = node;
+      if(current !== current.next){
+        current = current.next;
+      }else {
+        current =null;
+      }
     }
+    return false;
+  }
 
-    return this;
+  toString() {
+    let output = '';
+    let current = this.head;
+    if(!this.head) return output;
+    while(current) {
+      console.log('in string function', current);
+      // if(!current.next) {
+      //   output += current.value;
+      //   return output;
+      // }
+      output += `{ ${current.value} } -> `;
+      current = current.next;
+    }
+    return output += 'NULL';
   }
 }
-const list = new SinglyLinkedList();
 
+let newSinglyLinkedList = new SinglyLinkedList();
+newSinglyLinkedList.insert(5);
+newSinglyLinkedList.insert(10);
+newSinglyLinkedList.insert(15);
 
 module.exports = SinglyLinkedList;

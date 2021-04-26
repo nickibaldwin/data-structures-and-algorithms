@@ -1,25 +1,34 @@
-// 'use strict';
+'use strict';
 
-// const LL = require('../lib/ll.js');
+const LL = require('../lib/linked-list.js');
 
-// describe('Linked List', () => {
-//   it('should create an empty LL on instantiation', () => {
-//     let list = new LL();
-//     expect(list.head).toEqual(null);
-//   });
+describe('Linked List', () => {
+  it('should create an empty LL on instantiation', () => {
+    let list = new LL();
+    expect(list.length).toEqual(0);
+  });
 
-//   it('should add a node to the list', () => {
-//     let list = new LL();
-//     let first = 1;
-//     let second = 2;
+  it('should add a node to the list', () => {
+    let list = new LL();
+    let first = 1;
+    let second = 2;
 
-//     list.append(first);
-//     expect(list.head.value).toEqual(1);
+    list.insert(first);
 
-//     list.append(second);
-//     list.append(3);
-//     list.append(4);
-    
-//     console.log(list);
-//   });
-// });
+    list.insert(second);
+    console.log(list);
+    expect(list.head.value).toEqual(2);
+    expect(list.head.next.value).toEqual(1);
+  });
+
+  it('should stringify the list', () => {
+    let list = new LL();
+    let first = 1;
+    let second = 2;
+
+    list.insert(first);
+
+    list.insert(second);
+    expect(list.toString()).toEqual('{ 2 } -> { 1 } -> NULL');
+  });
+});

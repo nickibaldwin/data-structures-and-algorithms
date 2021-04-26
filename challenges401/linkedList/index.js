@@ -1,15 +1,17 @@
 'use strict';
 
-const LinkedList = require('./lib/ll.js');
+const LinkedList = require('./lib/linked-list.js');
 
 let ll = new LinkedList();
 
 console.log('empty list', ll);
 
-ll.append(10);
+ll.insert(10);
 
 console.log('single item', ll);
 
-ll.append(20);
+ll.insert(20);
 
 console.log('2 items', ll);
+console.log(ll.tail);
+console.log('in index', ll.toString());
