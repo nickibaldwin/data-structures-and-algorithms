@@ -38,12 +38,9 @@ Write the following methods for the Linked List Class:
   
 ## Approach & Efficiency
 
-Big O:
+Big O: 
 
-
-<!--_______________TO DO: UML Diagram/White board chart_______ -->
-
-<!-- [WHITE BOARD EXAMPLE](https://github.com/codefellows/seattle-code-javascript-401d41/blob/main/reference/ds-whiteboard-layout.png) -->
+![](2021-04-26-21-59-19.png)
 
 
 ### References:
