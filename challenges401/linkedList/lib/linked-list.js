@@ -55,7 +55,20 @@ class SinglyLinkedList {
     }
     return output += 'NULL';
   }
+
+  append(value) {
+    let current = this.head;
+    while(current.next) {
+      current = current.next;
+    } 
+    let newNode = new Node(value);
+    current.next = newNode;
+  }
+
+  
 }
+
+
 
 let newSinglyLinkedList = new SinglyLinkedList();
 newSinglyLinkedList.insert(5);

@@ -31,4 +31,15 @@ describe('Linked List', () => {
     list.insert(second);
     expect(list.toString()).toEqual('{ 2 } -> { 1 } -> NULL');
   });
+
+  it('should append a new node to the end of the list', () => {
+    let list = new LL();
+    let first = 1;
+    let second = 2;
+
+    list.insert(first);
+
+    list.append(second);
+    expect(list.head.next.value).toEqual(2);
+  });
 });
