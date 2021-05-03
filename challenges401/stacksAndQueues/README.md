@@ -8,12 +8,9 @@
 
 ### [Test Code - Queues](challenges401/stacksAndQueues/__tests__/queues.tests.js)
 
-### [PR in Github](https://github.com/nickibaldwin/data-structures-and-algorithms/pull/22)
+### [PR in Github](https://github.com/nickibaldwin/data-structures-and-algorithms/pull/24)
 
-### [Github Actions](https://github.com/nickibaldwin/data-structures-and-algorithms/actions)
-
-
-## Setup 
+## Setup
 
 Install proper dependencies:
 
@@ -24,7 +21,6 @@ Test Application:
   `npm run test stacks-and-queues.test.js`
 
 
-<!-- TODO:  -->
 ## Challenge Summary
 
 Create a stack and a queue.
