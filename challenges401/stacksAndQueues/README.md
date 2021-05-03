@@ -1,8 +1,12 @@
-# Code Challenge Class 10 - Stack and a Queue
+# Code Challenge Class 10 - Stack and Queue Implementation
 
-### [Solution Code](challenges401/stacksAndQueues/stacks_and_queues.js)
+### [Solution Code - Stacks](challenges401/stacksAndQueues/stacks.js)
 
-### [Test Code](challenges401/llZip/__test__/llZip.test.js)
+### [Solution Code - Queues](challenges401/stacksAndQueues/queues.js)
+
+### [Test Code - Stacks](challenges401/stacksAndQueues/__tests__/stacks.test.js)
+
+### [Test Code - Queues](challenges401/stacksAndQueues/__tests__/queues.tests.js)
 
 ### [PR in Github](https://github.com/nickibaldwin/data-structures-and-algorithms/pull/22)
 
@@ -17,21 +21,23 @@ Install proper dependencies:
 
 Test Application:
 
-  `npm run test llZip.tests.js`
+  `npm run test stacks-and-queues.test.js`
 
 
 <!-- TODO:  -->
 ## Challenge Summary
 
-Zip two linked lists.
+Create a stack and a queue.
 
 ## Challenge Description
 
-Write a function called **zipLists** which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. 
+Create a **Stack** class that has a top property. Define methods of **push, pop, and peek** to maniuplate the data accordingly. Also, check to make sure the stack is empty at the end.
+
+Create a **Queue** class that has a top property. Define methods of **push, pop, and peek** to maniuplate the data accordingly. Also, check to make sure the queue is empty at the end.
   
 ## Approach & Efficiency
 
-![](2021-04-28-20-08-53.png)
+![](./img/2021-05-02-21-16-14.png)
 
 ### References:
 
