@@ -59,3 +59,5 @@ INPUT | ARGS | OUTPUT
 - [Implementing Queue using Stavks in Javascript](http://progressivecoder.com/implementing-queue-using-stacks-in-javascript/)
 
 - [Udemy Master Class - Javascript Algorithms and Data Structures](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344200#overview)
+
+- Thanks to Lydia for sharing structuring/workflow and the above links!
