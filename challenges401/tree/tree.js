@@ -1,14 +1,14 @@
 'use strict';
 
 class BinaryTree {
-  constructor() {
-    this.root = null;
+  constructor(root = null) {
+    this.root = root;
   }
   //DFS depth first search traversal methods (recursive)
   //d=data, l=left, r=right
 
   preOrder() { //DLR
-    let results = {};
+    let results = [];
 
     let _walk = node => {
       results.push(node.value); //executing code
@@ -21,7 +21,7 @@ class BinaryTree {
   }
 
   inOrder() { //LDR
-    let results = {};
+    let results = [];
 
     let _walk = node => {
       if(node.left) _walk(node.left); //go left - if node,left is null, we are at a leaf
@@ -33,7 +33,7 @@ class BinaryTree {
   }
 
   postOrder() { //LRD
-    let results = {};
+    let results = [];
 
     let _walk = node => {
       if(node.left) _walk(node.left); //go left - if node,left is null, we are at a leaf
@@ -43,6 +43,18 @@ class BinaryTree {
     _walk(this.root);
     return results;
   }
+
+  findMaximumValue() {
+    let arr = this.preOrder();
+    let getMax = arr[0];
+    for(let i = 1; i < arr.length; i++){
+      if(arr[i] > getMax){
+        getMax = arr[i];
+      }
+    }
+    return getMax;
+  }
+
 }
 
 module.exports = BinaryTree;
