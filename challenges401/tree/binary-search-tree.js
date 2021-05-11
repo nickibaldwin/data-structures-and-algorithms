@@ -46,6 +46,22 @@ class BinarySearchTree {
     }
     return false;
   }
+
+  BFS(){
+    var node = this.root,
+      data = [],
+      queue = [];
+    queue.push(node);
+
+    while(queue.length){
+      node = queue.shift(); //FIFO: shift from beginning to get FIFO
+      data.push(node.value); //adding to our list that we're going to return
+      if(node.left) queue.push(node.left); //if there's a left, then queue push to the left
+      if(node.right) queue.push(node.right); //if there's a right then add it to the queue
+    }
+    return data;//data variable where we are building up our array
+  }
+
 }
 
 module.exports = BinarySearchTree;
