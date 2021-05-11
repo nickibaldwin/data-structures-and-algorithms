@@ -20,3 +20,9 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Code Challenge Class 08: Linked List - Zip](challenges401/linkedList/README.md)
 - [Code Challenge Class 10: Stacks and Queues](challenges401/stacksAndQueues/README.md)
 - [Code Challenge Class 11: Queue with Stacks](challenges401/queueWithStacks/README.md)
+- [Code Challenge Class 12: FIFO Animal Shelter](challenges401/fifoAnimalShelter/README.md)
+- [Code Challenge Class 13: Multi-Bracket Validation](challenges401/multiBracketValidation/README.md)
+- Code Challenge Class 14: Queue with Stacks Partnered Whiteboard Challenge
+- [Code Challenge Class 15: Binary Tree and BST Implementation](challenges401/tree/README.md)
+- [Code Challenge Class 16: Find Max Value of BT](challenges401/tree/README.md)
+- [Code Challenge Class 17: Breadth First Search of BST](challenges401/tree/README.md)
