@@ -1,5 +1,5 @@
 {
   "javascript.suggest.autoImports": false,
-  "editor.tabSize": 2,
+  "editor.tabSize": 1,
   "editor.detectIndentation": false
 }
