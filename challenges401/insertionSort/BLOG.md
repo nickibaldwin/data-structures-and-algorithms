@@ -1,6 +1,6 @@
 # Code Challenge Class 26 - Insertion Sort Blog Post
 
-### [PR in Github](https://github.com/nickibaldwin/data-structures-and-algorithms/pull/32)
+### [PR in Github](https://github.com/nickibaldwin/data-structures-and-algorithms/pull/33)
 
 ### Insertion Sort:
 
