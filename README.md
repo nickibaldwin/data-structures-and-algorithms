@@ -26,3 +26,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Code Challenge Class 15: Binary Tree and BST Implementation](challenges401/tree/README.md)
 - [Code Challenge Class 16: Find Max Value of BT](challenges401/tree/README.md)
 - [Code Challenge Class 17: Breadth First Search of BST](challenges401/tree/README.md)
+- [Code Challenge Class 26: Insertion Sort - Blog Post](challenges401/insertionSort/blog.md)
