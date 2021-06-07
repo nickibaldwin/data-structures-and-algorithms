@@ -4,7 +4,7 @@
 
 ### Quick Sort:
 
-Uses a partition function to split the array elements. Given an array, this function should designate an element as the partition(pivot). This happens in place, meaning does not create a new array.
+This is within the divide and conquer algorithm category. Uses a partition function to split the array elements. Given an array, this function should designate an element as the partition(pivot). This happens in place, meaning does not create a new array.
 
 This should rearrange the array so all values less than the pivot are moved to the left of the pivot and all values greater are moved to the right. Then this should return the index of the pivot. Continue to loop through until the entire array is sorted.
 
@@ -54,6 +54,10 @@ This should rearrange the array so all values less than the pivot are moved to t
 
 5. Swap the pivot element with the pivot index and return the pivot index.
 
+![](./assets/2021-05-27-13-36-57.png)
+
+[Source](https://www.youtube.com/watch?v=pywzWVeGVfo)
+
 ### Code: 
 
 ```javascript
@@ -91,8 +95,6 @@ quickSort([8, 4, 23, 42, 16, 15]);
 ```
 
 ### Efficency:
-
-- Space: O(log(n))
 
 - Time: O(n log(n))
 
