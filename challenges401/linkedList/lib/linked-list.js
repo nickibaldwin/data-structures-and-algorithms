@@ -1,7 +1,5 @@
 'use strict';
 
-// const Node = require('./node.js');
-
 class Node {
   constructor(value) {
     this.value = value;
