@@ -16,7 +16,7 @@ class BinaryTree {
       if(node.right) _walk(node.right); // go right - if node.right=null then we are at a leaf - traversing
     };
     console.log(_walk(this.root));
-    _walk(this.root);
+    _walk(this.root); // for whiteboard use ll.root instead of this.root, unless using a class constructor
     return results;
   }
 
